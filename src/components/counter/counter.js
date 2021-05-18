@@ -16,6 +16,7 @@ const Counter = (props) => {
 
     //style
 
+    //execution
     return (
         <>
             <div>
