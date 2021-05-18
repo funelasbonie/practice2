@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Counter from './counter/counter';
 
+
 const App = () => {
+
     return (
         <main>
-            <Counter limitValue={2} />
+            <Counter />
         </main>
     );
 }

@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import Button from './button';
+import Display from './display';
 
 const Counter = (props) => {
 
     //props
-    const limitValue = props.limitValue;
 
     //state
     const [currentState, setState] = useState(0);
 
     //function
-    const increment = () => {
-        setState(currentState + limitValue);
+    const increment = (val) => {
+        setState(currentState + val);
     }
 
     //style
@@ -18,7 +19,9 @@ const Counter = (props) => {
     return (
         <>
             <div>
-                <button onClick={increment}>{currentState}</button>
+                <Button incrementOnClick={increment} limitValue={2} />
+                <Button incrementOnClick={increment} limitValue={4} />
+                <Display message={currentState} />
             </div>
         </>
     );
