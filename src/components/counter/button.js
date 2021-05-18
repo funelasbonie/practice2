@@ -4,13 +4,12 @@ const Button = (props) => {
 
     //props
     const limitValue = props.limitValue;
-
     const incrementOnClick = props.incrementOnClick;
 
     //state  
 
     //function    
-    const increment = () => {
+    const inc = () => {
         incrementOnClick(limitValue);
     }
 
@@ -19,7 +18,7 @@ const Button = (props) => {
     return (
         <>
             <div>
-                <button onClick={increment}>+{limitValue}</button>
+                <button onClick={inc}>+{limitValue}</button>
             </div>
         </>
     );
